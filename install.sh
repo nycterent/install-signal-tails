@@ -10,8 +10,8 @@ echo "deb [arch=amd64] tor+https://updates.signal.org/desktop/apt xenial main" |
 apt update
 apt install -y signal-desktop
 
-echo "#!/bin/bash" | tee /usr/local/bin/run-signal
-echo "HTTPS_PROXY=socks5://127.0.0.1:9050 /opt/Signal/signal-desktop --no-sandbox" | tee -a /usr/local/bin/run-signal
+echo "#!/bin/bash"| tee /usr/local/bin/run-signal
+echo "HTTPS_PROXY=socks5://127.0.0.1:9050 /opt/Signal/signal-desktop --no-sandbox" | tee -a /usr/local/bin/run-signal
 
 chmod +x /usr/local/bin/run-signal
 
